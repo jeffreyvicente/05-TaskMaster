@@ -55,7 +55,7 @@ THEN the saved events persist
 
 ## Preview
 
-View live preview hosted on [GitHub Pages](https://jeffreyvicente.github.io/04-brain-battle/)
+View live preview hosted on [GitHub Pages](https://jeffreyvicente.github.io/05-TaskMaster/)
 
 ![alt text](/assets/images/Brain%20Battle.gif)
 
