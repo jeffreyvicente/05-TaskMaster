@@ -1,6 +1,11 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
+
+var today = dayjs();
+$('#currentDay').text("Today is " + today.format('MMM D, YYYY'));
+
+
 $(function () {
     // TODO: Add a listener for click events on the save button. This code should
     // use the id in the containing time-block as a key to save the user input in
@@ -20,5 +25,59 @@ $(function () {
     // attribute of each time-block be used to do this?
     //
     // TODO: Add code to display the current date in the header of the page.
+
+    /*
+    var temp = $('#hour-9');
+    console.log("Currently how #hour-9 is formated" + temp);
+    temp = $('#hour-9').removeClass('future');
+    console.log("Currently how #hour-9 is formated with future removed" + temp);
+    temp = $('#hour-9').addClass('past');
+    console.log("Currently how #hour-9 is formated with past added" + temp);
+*/
+    var todayHour = dayjs('2023-04-15 12:00').hour();
+   
+    console.log("This is the value of todayHour " + todayHour);
+
+    /*
+    $(".time-block").each(function(){
+
+      var timeBlockId = $(this).attr("id");
+      //console.log("This is the value of " + timeBlockId)
+      timeBlockId = timeBlockId.replace("hour-", "");
+      //console.log("This is the value of timeBlockID with replace " + timeBlockId);
+      //console.log("This is the value of todayHour " + todayHour + " \n");
+      if(timeBlockId < todayHour){
+        //console.log("This is in the past")
+        $(this).addClass('past');
+      }else if (timeBlockId == todayHour){
+        //console.log("The hours match")
+        $(this).addClass('present');
+      }else{
+        //console.log("This time is in the future.");
+        $(this).addClass('future');
+      }
+
+    });
+    */
+
+    $(".saveBtn").on("click",function(){
+      var hourId = $(this).parent(".time-block").attr("id");
+      console.log("This should grab the id of the parent (hour-x): " + hourId);
+      
+      var hourDesc = $(this).siblings(".description").val();
+      console.log("This should be desc of the hour block: " + hourDesc);
+
+      /*Saves the item in local storage with the hourId being the key, 
+        and the hourDesc storing the description.
+        Output: 
+        KEY:(hour-XX)
+        VALUE: (entered description)
+      */
+      
+      localStorage.setItem(hourId, hourDesc);
+    });
+
+
+
   });
   
