@@ -35,7 +35,6 @@ $(function () {
     console.log("Currently how #hour-9 is formated with past added" + temp);
 */
     var todayHour = dayjs('2023-04-15 12:00').hour();
-   
     console.log("This is the value of todayHour " + todayHour);
 
 
@@ -87,15 +86,21 @@ $(function () {
         // Add the class future to the time-block div
         $(this).addClass("future");
       }
+    });
+
+    $(".time-block").each(function(){
     
-
-
-
-
-
-
+    var savedDesc = localStorage.getItem($(this).attr("id")); 
+    //console.log("This is the saved description " + savedDesc);
+    
+    if(savedDesc === null){
+      console.log("This is null, returning!")
+      return;
+    };
+    $(this).find(".description").text(savedDesc);
 
     });
+
 
 
 
