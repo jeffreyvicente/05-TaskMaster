@@ -38,27 +38,7 @@ $(function () {
    
     console.log("This is the value of todayHour " + todayHour);
 
-    /*
-    $(".time-block").each(function(){
 
-      var timeBlockId = $(this).attr("id");
-      //console.log("This is the value of " + timeBlockId)
-      timeBlockId = timeBlockId.replace("hour-", "");
-      //console.log("This is the value of timeBlockID with replace " + timeBlockId);
-      //console.log("This is the value of todayHour " + todayHour + " \n");
-      if(timeBlockId < todayHour){
-        //console.log("This is in the past")
-        $(this).addClass('past');
-      }else if (timeBlockId == todayHour){
-        //console.log("The hours match")
-        $(this).addClass('present');
-      }else{
-        //console.log("This time is in the future.");
-        $(this).addClass('future');
-      }
-
-    });
-    */
 
     $(".saveBtn").on("click",function(){
       var hourId = $(this).parent(".time-block").attr("id");
