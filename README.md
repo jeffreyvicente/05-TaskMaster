@@ -72,5 +72,7 @@ Technologies Used
 ## Technologies Used
 - HTML
 - CSS
-- JavaScript
+- Bootstrap
 - jQuery
+- dayJS
+
