@@ -53,9 +53,50 @@ $(function () {
         KEY:(hour-XX)
         VALUE: (entered description)
       */
-      
       localStorage.setItem(hourId, hourDesc);
     });
+
+    $(".time-block").each(function(){
+
+
+      console.log("Start of the time block function");
+      //Output is currently hour-xx
+      var hourId = $(this).attr("id");
+      console.log("timeId: " + hourId);
+
+      //Removes the hour- from the string so that the hour is only returned. 
+      var timeIdAppend = hourId.replace("hour-", "");
+      console.log("Appended timeId " + timeIdAppend);
+
+      // Returns the current hour. 
+      // Example 7:00 PM will return the value of 19.
+      var currentTime = dayjs('2023-04-15 12:00').hour();
+      console.log("This is the value of currentTime: " + currentTime);
+
+      //Checks if the hour block is in the future, past or current
+      if(currentTime > timeIdAppend){
+        console.log("Currently in the past");
+        // Adds the class past to the time-block div. 
+        $(this).addClass("past");
+      }else if ( currentTime == timeIdAppend){
+        console.log("The times are equal");
+        // Adds the class present to the time-block div. 
+        $(this).addClass("present");
+      }else{
+        console.log("Current in the future");
+        // Add the class future to the time-block div
+        $(this).addClass("future");
+      }
+    
+
+
+
+
+
+
+
+    });
+
 
 
 

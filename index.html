@@ -189,3 +189,48 @@
     <script src="./assets/scripts/script.js"></script>
   </body>
 </html>
+
+
+  
+$(".time-block").each(function(){
+
+  //Output is currently hour-xx
+ var hourId = $(this).attr("id");
+ console.log("This is the current ID that is being worked on " + hourId);
+ 
+ //Removes the hour- from the string so that the hour is only returned. 
+ var hourValue = hourId.replace("hour-", "");
+ console.log("This the current value of hourValue: " + hourValue);
+ 
+ // Returns the current hour. 
+ // Example 7:00 PM will return the value of 19. 
+ var currentHour = dayjs().hour();
+ console.log("This is the current value of currentHour: " + currentHour);
+ 
+
+
+
+
+});
+
+/*
+$(".time-block").each(function(){
+
+  var timeBlockId = $(this).attr("id");
+  //console.log("This is the value of " + timeBlockId)
+  timeBlockId = timeBlockId.replace("hour-", "");
+  //console.log("This is the value of timeBlockID with replace " + timeBlockId);
+  //console.log("This is the value of todayHour " + todayHour + " \n");
+  if(timeBlockId < todayHour){
+    //console.log("This is in the past")
+    $(this).addClass('past');
+  }else if (timeBlockId == todayHour){
+    //console.log("The hours match")
+    $(this).addClass('present');
+  }else{
+    //console.log("This time is in the future.");
+    $(this).addClass('future');
+  }
+
+});
+*/
