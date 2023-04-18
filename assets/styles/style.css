@@ -1,8 +1,15 @@
+/*
+Start of the CSS file
+*/
+
+/* Start of the Body attributes */
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
   }
   
+  /* Start of the textarea CSS attributes */
   textarea {
     background: transparent;
     border: none;
@@ -11,40 +18,47 @@ body {
     border-left: 1px solid black;
     padding: 10px;
   }
-  
+  /* Start of the description CSS attributes */
   .description {
     white-space: pre-wrap;
   }
-  
+
+  /* Start of the time-block CSS attributes */
   .time-block {
     border-radius: 15px;
   }
   
+  /* Start of the row CSS attributes */
   .row {
     border-top: 1px solid white;
   }
   
+  /* Start of the hour CSS attributes */
   .hour {
     background-color: #ffffff;
     color: #000000;
     border-top: 1px dashed #000000;
   }
   
+  /* Start of the past CSS attributes */
   .past {
     background-color: #d3d3d3;
     color: white;
   }
   
+  /* Start of the present CSS attributes */
   .present {
     background-color: #ff6961;
     color: white;
   }
   
+  /* Start of the future CSS attributes */
   .future {
     background-color: #77dd77;
     color: white;
   }
   
+  /* Start of the saveBtn CSS attributes */
   .saveBtn {
     border-left: 1px solid black;
     border-top-right-radius: 15px;
@@ -53,8 +67,13 @@ body {
     color: white;
   }
   
+  /* Start of the saveBtn hover CSS attributes */
   .saveBtn i:hover {
     font-size: 20px;
     transition: all 0.3s ease-in-out;
   }
   
+
+/*
+END of the CSS file
+*/
