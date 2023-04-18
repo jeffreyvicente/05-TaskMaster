@@ -57,7 +57,7 @@ THEN the saved events persist
 
 View live preview hosted on [GitHub Pages](https://jeffreyvicente.github.io/05-TaskMaster/)
 
-![alt text](/assets/images/05-third-party-apis-homework-demo.gif)
+![alt text](/assets/images/Work%20Day%20Scheduler.gif)
 
 
 ## Features
